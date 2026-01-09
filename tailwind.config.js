@@ -67,6 +67,7 @@ export default {
         'scroll': 'scroll 20s linear infinite',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
         'text-gradient': 'text-gradient 8s linear infinite',
+        'tilt': 'tilt 10s infinite linear',
       },
       keyframes: {
         scroll: {
@@ -80,6 +81,11 @@ export default {
         'text-gradient': {
           '0%': { backgroundPosition: '0% center' },
           '100%': { backgroundPosition: '200% center' },
+        },
+        tilt: {
+          '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(0.5deg)' },
+          '75%': { transform: 'rotate(-0.5deg)' },
         },
       },
     },

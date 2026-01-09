@@ -40,24 +40,17 @@
         Nous déployons vos IA sur vos machines. Vos données ne sortent plus.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-        
+      <div class="flex justify-center mt-10">
         <button 
           @click="scrollToPricing"
-          class="group relative px-8 py-4 bg-white text-slate-950 font-semibold rounded-lg overflow-hidden transition-all hover:scale-105 active:scale-95"
+          class="relative inline-flex group"
         >
-          <div class="absolute inset-0 bg-gradient-to-r from-indigo-100 to-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <span class="relative flex items-center gap-2">
-            Configurer mon Infra
-            <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </span>
-        </button>
-
-        <button 
-          @click="scrollToDemo"
-          class="px-8 py-4 rounded-lg border border-slate-800 text-slate-300 hover:text-white hover:border-slate-600 hover:bg-slate-900/50 transition-all backdrop-blur-sm"
-        >
-          Voir la démo
+          <div class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
+          
+          <div class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-slate-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 border border-slate-800 hover:bg-slate-800">
+            <span class="mr-3">Configurer mon Infra</span>
+            <ArrowRight class="w-5 h-5 text-cyan-400 transition-transform duration-300 group-hover:translate-x-1" />
+          </div>
         </button>
       </div>
 
@@ -74,10 +67,6 @@ import TypewriterEffect from '@/components/ui/TypewriterEffect.vue'
 
 const scrollToPricing = () => {
   document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })
-}
-
-const scrollToDemo = () => {
-  document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 

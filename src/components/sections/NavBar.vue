@@ -8,12 +8,8 @@
     ]"
   >
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-      <div class="flex items-center gap-2 font-bold text-xl tracking-tighter text-white">
-        <Cpu class="text-cyan-500 w-6 h-6" />
-        <span>
-          <span class="text-gold-gradient">SmartUnity</span>
-          <span class="text-cyan-500">IA</span>
-        </span>
+      <div class="flex items-center">
+        <img src="/logo.png" alt="SmartUnityIA Logo" class="h-12 w-auto object-contain hover:scale-110 transition-transform duration-300" />
       </div>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
         <button
@@ -73,7 +69,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { Cpu, Menu, X, Calendar } from 'lucide-vue-next'
+import { Menu, X, Calendar } from 'lucide-vue-next'
 import { useScroll } from '@/composables/useScroll'
 import CallButton from '@/components/ui/CallButton.vue'
 
