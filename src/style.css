@@ -3,11 +3,86 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Variables CSS - Palette Luxe Tech */
+    /* Backgrounds */
+    --color-background-dark: #1C1C21;    /* slate-950 - Fond très sombre */
+    --color-background-ui: #28282D;       /* slate-900 - Cartes / Sections */
+    --color-background-chat: #323238;     /* slate-800 - Survols / Bordures */
+    --color-background-tertiary: #45454F; /* slate-700 - Textes tertiaires */
+    
+    /* Gold - Couleur de marque */
+    --color-gold-300: #E5D5B0;            /* Or très clair - Reflets */
+    --color-gold-400: #D4C095;            /* Or clair - Texte mis en avant */
+    --color-gold-500: #C8B58D;            /* Or de base - Couleur de marque */
+    --color-gold-600: #A69268;            /* Or foncé - États :hover */
+    --color-gold-900: #423825;            /* Or très sombre - Fonds badges */
+    
+    /* Textes */
+    --color-text-light: #EAEAEF;          /* slate-50 - Texte principal */
+    --color-text-secondary: #9CA3AF;      /* slate-400/500 - Textes secondaires */
+    
+    /* Alias pour compatibilité */
+    --color-primary-gold: var(--color-gold-500);
+    --color-accent-gold: #D1A760;
+  }
+
   * {
-    @apply selection:bg-cyan-500/30;
+    @apply selection:bg-gold-500/30 selection:text-slate-950;
   }
   
   body {
-    @apply bg-slate-950 text-slate-200 font-sans overflow-x-hidden;
+    @apply bg-slate-950 text-slate-50 font-sans overflow-x-hidden;
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
   }
+
+  /* Scrollbar Premium - Style Luxe Tech */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold-500) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-gold-500);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold-400);
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    background: var(--color-gold-600);
+    background-clip: padding-box;
+  }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(to right, #C8B58D, #FFE5B4, #C8B58D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+a {
+  color: #D1A760;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #FFD700;
 }

@@ -18,7 +18,7 @@
           <ShieldCheck class="w-4 h-4 text-green-400 animate-pulse" />
           CONFIDENTIALITÉ 100% LOCALE
         </div>
-        <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1]">
+        <h1 class="text-5xl md:text-7xl font-bold text-gold-gradient tracking-tight mb-6 leading-[1.1]">
           Votre Intelligence Artificielle sera <br />
           <TypewriterEffect :words="['Sécurisée.', 'Souveraine.', 'Locale.', 'Rentable.']" />
         </h1>
@@ -28,9 +28,10 @@
           technologies françaises.
         </p>
         <div class="flex flex-col sm:flex-row items-start gap-4">
-          <Button primary @click="openCalendly" :icon="Calendar">
+          <CallButton @click="openCal" class="flex items-center gap-2">
+            <Calendar class="w-4 h-4" />
             Réserver un appel découverte
-          </Button>
+          </CallButton>
           <Button @click="scrollToSection('services')" :icon="ArrowRight">
             Voir mes solutions
           </Button>
@@ -49,11 +50,12 @@
 <script setup>
 import { AlertTriangle, Calendar, ArrowRight, ShieldCheck } from 'lucide-vue-next'
 import Button from '@/components/ui/Button.vue'
+import CallButton from '@/components/ui/CallButton.vue'
 import TypewriterEffect from '@/components/ui/TypewriterEffect.vue'
 import InteractiveShowcase from '@/components/ui/InteractiveShowcase.vue'
 
-const openCalendly = () => {
-  window.open('https://calendly.com/', '_blank')
+const openCal = () => {
+  window.open('https://app.cal.eu/smartunityia/30min', '_blank')
 }
 
 const scrollToSection = (id) => {

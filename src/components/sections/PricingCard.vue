@@ -15,7 +15,7 @@
         ]"
       ></div>
 
-      <div class="relative bg-slate-900/90 backdrop-blur-xl rounded-xl p-8 h-full flex flex-col border border-slate-700/50 group-hover:border-transparent transition-colors">
+      <div class="relative bg-slate-900/90 backdrop-blur-xl rounded-xl p-8 h-full flex flex-col border border-slate-800 group-hover:border-gold-500/50 transition-all duration-300">
         <div
           v-if="recommended"
           class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-950 text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide shadow-lg shadow-cyan-500/30"

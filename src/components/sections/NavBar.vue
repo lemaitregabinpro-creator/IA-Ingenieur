@@ -10,7 +10,10 @@
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
       <div class="flex items-center gap-2 font-bold text-xl tracking-tighter text-white">
         <Cpu class="text-cyan-500 w-6 h-6" />
-        <span>SmartUnity<span class="text-cyan-500">IA</span></span>
+        <span>
+          <span class="text-gold-gradient">SmartUnity</span>
+          <span class="text-cyan-500">IA</span>
+        </span>
       </div>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
         <button
@@ -31,9 +34,10 @@
         >
           Offres
         </button>
-        <Button primary @click="openCalendly" class="px-4 py-2 text-sm font-bold" :icon="Calendar">
+        <CallButton @click="openCal" class="px-4 py-2 text-sm font-bold flex items-center gap-2">
+          <Calendar class="w-4 h-4" />
           Réserver un appel
-        </Button>
+        </CallButton>
       </div>
       <button
         class="md:hidden text-white"
@@ -59,9 +63,10 @@
       >
         Offres
       </button>
-      <Button primary @click="openCalendly" class="w-full justify-center" :icon="Calendar">
+      <CallButton @click="openCal" class="w-full justify-center flex items-center gap-2">
+        <Calendar class="w-4 h-4" />
         Réserver un appel
-      </Button>
+      </CallButton>
     </div>
   </nav>
 </template>
@@ -70,7 +75,7 @@
 import { ref } from 'vue'
 import { Cpu, Menu, X, Calendar } from 'lucide-vue-next'
 import { useScroll } from '@/composables/useScroll'
-import Button from '@/components/ui/Button.vue'
+import CallButton from '@/components/ui/CallButton.vue'
 
 const { isScrolled } = useScroll()
 const mobileMenuOpen = ref(false)
@@ -83,12 +88,12 @@ const scrollToSection = (id) => {
   }
 }
 
-const openCalendly = () => {
-  window.open('https://calendly.com/', '_blank')
+const openCal = () => {
+  window.open('https://app.cal.eu/smartunityia/30min', '_blank')
 }
 
 defineExpose({
   scrollToSection,
-  openCalendly,
+  openCal,
 })
 </script>

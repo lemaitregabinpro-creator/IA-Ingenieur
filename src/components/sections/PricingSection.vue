@@ -19,16 +19,17 @@
             'Livrable : Dossier PDF complet'
           ]"
           button-text="Commander mon plan"
-          :cta="openCalendly"
+          :cta="openCal"
         />
         <PricingCard
-          title="MVP / Prototype"
-          subtitle="Socle Technique"
+          title="MVP / Private Brain"
+          subtitle="Solution Clé en Main"
           price="3 500€"
           :recommended="true"
           delay="200ms"
-          disclaimer="*Prix de départ indicatif pour un socle technique standard. Le budget final s'ajuste selon la complexité des intégrations."
+          disclaimer="*Acompte de 50% requis à la commande pour l'achat du Mac Mini. Le matériel vous appartient dès la livraison."
           :features="[
+            'Inclus : Mac Mini M2/M4 (Serveur)',
             'Développement React/Python sur mesure',
             'Cession totale du Code Source (IP)',
             'Installation sur votre environnement',
@@ -36,7 +37,7 @@
             'Documentation technique complète'
           ]"
           button-text="Démarrer le projet"
-          :cta="openCalendly"
+          :cta="openCal"
         />
         <PricingCard
           title="Solution Custom"
@@ -50,7 +51,7 @@
             'Formation des équipes techniques',
             'Audit de conformité continu'
           ]"
-          :cta="openCalendly"
+          :cta="openCal"
         />
       </div>
     </div>
@@ -61,7 +62,7 @@
 import TerminalBackground from '@/components/ui/TerminalBackground.vue'
 import PricingCard from './PricingCard.vue'
 
-const openCalendly = () => {
-  window.open('https://calendly.com/', '_blank')
+const openCal = () => {
+  window.open('https://app.cal.eu/smartunityia/30min', '_blank')
 }
 </script>

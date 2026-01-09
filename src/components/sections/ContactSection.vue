@@ -9,7 +9,7 @@
           Prenez de l'avance en la maîtrisant totalement.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <Button primary @click="openCalendly" class="text-lg px-8 py-4" :icon="Calendar">
+          <Button primary @click="openCal" class="text-lg px-8 py-4" :icon="Calendar">
             Réserver mon audit gratuit (30 min)
           </Button>
           <Button @click="openEmail" class="text-lg px-8 py-4" :icon="Mail">
@@ -29,8 +29,8 @@
 import { Calendar, Mail, Linkedin } from 'lucide-vue-next'
 import Button from '@/components/ui/Button.vue'
 
-const openCalendly = () => {
-  window.open('https://calendly.com/', '_blank')
+const openCal = () => {
+  window.open('https://app.cal.eu/smartunityia/30min', '_blank')
 }
 
 const openEmail = () => {

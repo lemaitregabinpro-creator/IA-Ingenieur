@@ -3,8 +3,8 @@
     :class="[
       'px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden group',
       primary
-        ? 'bg-cyan-500 text-slate-950 hover:bg-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.4)] font-bold'
-        : 'bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700',
+        ? 'bg-cyan-500 text-slate-950 hover:bg-cyan-400 hover:shadow-gold-glow font-bold'
+        : 'bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 hover:shadow-gold-glow',
       className
     ]"
     @click="onClick"

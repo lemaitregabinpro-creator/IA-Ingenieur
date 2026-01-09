@@ -7,7 +7,7 @@
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <FadeInSection delay="0ms">
-          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-all duration-300 group h-full">
+          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-gold-500/50 transition-all duration-300 group h-full">
             <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/10 transition-colors">
               <Server class="text-cyan-400 w-6 h-6" />
             </div>
@@ -18,7 +18,7 @@
           </div>
         </FadeInSection>
         <FadeInSection delay="100ms">
-          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-all duration-300 group h-full">
+          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-gold-500/50 transition-all duration-300 group h-full">
             <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/10 transition-colors">
               <MessageSquare class="text-cyan-400 w-6 h-6" />
             </div>
@@ -29,7 +29,7 @@
           </div>
         </FadeInSection>
         <FadeInSection delay="200ms">
-          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-all duration-300 group h-full">
+          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-gold-500/50 transition-all duration-300 group h-full">
             <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/10 transition-colors">
               <Terminal class="text-cyan-400 w-6 h-6" />
             </div>

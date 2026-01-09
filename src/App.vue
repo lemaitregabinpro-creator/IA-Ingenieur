@@ -1,21 +1,23 @@
 <template>
   <div class="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-cyan-500/30 overflow-x-hidden">
-    <NavBar />
-    <HeroSection />
-    <SocialProof />
-    <ExpertiseSection />
-    <LeadMagnet />
-    <ServicesGrid />
-    <section id="roi" class="py-20 px-6">
-      <FadeInSection>
-        <RoiCalculator />
-      </FadeInSection>
-    </section>
-    <PricingSection />
-    <FaqSection />
-    <AboutSection />
-    <ContactSection />
-    <Footer />
+    <div class="relative z-10">
+      <NavBar />
+      <HeroSection />
+      <SocialProof />
+      <ExpertiseSection />
+      <LeadMagnet />
+      <ServicesGrid />
+      <section id="roi" class="py-20 px-6">
+        <FadeInSection>
+          <RoiCalculator />
+        </FadeInSection>
+      </section>
+      <PricingSection />
+      <FaqSection />
+      <AboutSection />
+      <ContactSection />
+      <Footer />
+    </div>
   </div>
 </template>
 

@@ -9,7 +9,8 @@
           <span
             v-for="tech in technologies"
             :key="tech"
-            class="text-xl font-bold text-slate-700 hover:text-slate-400 transition-colors cursor-default select-none px-4"
+            class="text-xl font-bold text-gold-400 hover:text-gold-500 transition-colors cursor-default select-none px-4"
+            style="text-shadow: 0 0 12px rgba(209, 167, 96, 0.45);"
           >
             {{ tech }}
           </span>

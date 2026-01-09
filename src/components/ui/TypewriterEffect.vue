@@ -1,5 +1,5 @@
 <template>
-  <span class="font-mono text-cyan-400">
+  <span class="font-mono font-bold text-gold-300 drop-shadow-md">
     {{ displayedText }}
     <span :class="['transition-opacity', blink ? 'opacity-100' : 'opacity-0']">|</span>
   </span>
