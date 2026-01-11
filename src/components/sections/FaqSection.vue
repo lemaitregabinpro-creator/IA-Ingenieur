@@ -1,31 +1,52 @@
 <template>
   <section id="faq" class="py-24 px-6 max-w-3xl mx-auto">
     <h2 class="text-3xl font-bold text-white mb-8 text-center">Questions Fréquentes</h2>
+    <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+      Découvrez nos réponses détaillées sur les solutions IA souveraines, Local First, et la protection des données sensibles pour finance, santé et juridique.
+    </p>
     <div class="space-y-2">
-      <FaqItem
-        question="Quels modèles d'IA utilisez-vous ?"
-        answer="Le meilleur des deux mondes. Pour le 100% local, nous installons Mistral directement sur votre Mac Mini. Pour des besoins connectés, nous utilisons l'API d'Euria (IA Suisse), choisie pour sa sécurité militaire et son approche éco-responsable (faible empreinte carbone)."
-      />
-      <FaqItem
-        question="Où sont mes données si j'utilise l'API Euria ?"
-        answer="Elles restent en Europe. Contrairement aux modèles américains, Euria est hébergée en Suisse (juridiction neutre et stricte) ou en France. Vos données transitent chiffrées, sont traitées, puis oubliées. Elles ne servent jamais à entraîner leurs modèles."
-      />
-      <FaqItem
-        question="Pourquoi acheter un Mac Mini (CAPEX) ?"
-        answer="Pour posséder votre 'cerveau' numérique. C'est un actif amortissable. Une fois le matériel payé, faire tourner Mistral en local ne vous coûte que l'électricité, contrairement à un abonnement SaaS qui augmente avec votre usage."
-      />
-      <FaqItem
-        question="L'IA locale fonctionne-t-elle sans internet ?"
-        answer="Absolument. Votre Mac Mini avec Mistral peut fonctionner en totale autonomie (Air-Gapped). C'est la configuration ultime pour les données ultra-sensibles (Médical, Défense, Brevets)."
-      />
-      <FaqItem
-        question="L'argument 'Eco-responsable', c'est du marketing ?"
-        answer="Non, c'est de la physique. Utiliser Euria (optimisée) ou faire tourner un petit modèle Mistral localement consomme 100x moins d'énergie qu'une requête vers un modèle géant comme GPT-4. Et Euria utilise des serveurs qui chauffent les batiments. C'est bon pour la planète et pour votre facture RSE."
-      />
+      <div
+        v-for="faq in faqData"
+        :key="faq.id"
+        class="bg-slate-900/50 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition-colors"
+      >
+        <router-link
+          :to="`/faq/${faq.slug}`"
+          class="block p-6 group"
+        >
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                {{ faq.question }}
+              </h3>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                {{ faq.shortAnswer }}
+              </p>
+            </div>
+            <ArrowRight class="w-5 h-5 text-slate-600 group-hover:text-cyan-400 transition-colors shrink-0 mt-1" />
+          </div>
+        </router-link>
+      </div>
+    </div>
+    
+    <div class="mt-12 text-center">
+      <p class="text-slate-400 mb-6">Une question non résolue ?</p>
+      <CallButton @click="openCal" class="text-lg px-8 py-4">
+        <div class="flex items-center gap-3">
+          <Calendar class="w-5 h-5" />
+          <span>Réserver un appel découverte</span>
+        </div>
+      </CallButton>
     </div>
   </section>
 </template>
 
-<script lang="ts" setup>
-import FaqItem from '../ui/FaqItem.vue'
+<script setup>
+import { faqData } from '@/data/faqData'
+import CallButton from '@/components/ui/CallButton.vue'
+import { ArrowRight, Calendar } from 'lucide-vue-next'
+
+const openCal = () => {
+  window.open('https://app.cal.eu/smartunityia/30min', '_blank')
+}
 </script>
