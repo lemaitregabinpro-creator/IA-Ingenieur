@@ -1,11 +1,11 @@
 <template>
-  <section id="services" class="py-24 px-6">
+  <section id="services" class="py-12 md:py-24 px-6">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-white mb-4">Solutions IA Souveraines & Agents IA Autonomes</h2>
-        <p class="text-slate-400">Ingénieur IA et développeur IA spécialisé en Local First pour finance, santé, juridique.</p>
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 break-words">Solutions IA Souveraines & Agents IA Autonomes</h2>
+        <p class="text-slate-400 break-words">Ingénieur IA et développeur IA spécialisé en Local First pour finance, santé, juridique.</p>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <FadeInSection delay="0ms">
           <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-gold-500/50 transition-all duration-300 group h-full">
             <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/10 transition-colors">

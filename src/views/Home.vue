@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-cyan-500/30 overflow-x-hidden">
+    <FloatingBackgroundElements />
     <div class="relative z-10">
       <NavBar />
       <HeroSection />
@@ -34,6 +35,7 @@ import ContactSection from '@/components/sections/ContactSection.vue'
 import Footer from '@/components/sections/Footer.vue'
 import FadeInSection from '@/components/ui/FadeInSection.vue'
 import ContactModal from '@/components/ui/ContactModal.vue'
+import FloatingBackgroundElements from '@/components/ui/FloatingBackgroundElements.vue'
 
 const isContactOpen = ref(false)
 const openContactModal = () => {

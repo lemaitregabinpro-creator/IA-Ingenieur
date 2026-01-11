@@ -54,6 +54,12 @@
         >
           Offres
         </button>
+        <button
+          @click="scrollToSection('faq')"
+          class="hover:text-cyan-400 transition-colors"
+        >
+          FAQ
+        </button>
         <CallButton @click="openCal" class="px-4 py-2 text-sm font-bold flex items-center gap-2">
           <Calendar class="w-4 h-4" />
           Réserver un appel
@@ -83,6 +89,12 @@
       >
         Offres
       </button>
+      <button
+        @click="scrollToSection('faq')"
+        class="text-left py-2 hover:text-cyan-400"
+      >
+        FAQ
+      </button>
       <CallButton @click="openCal" class="w-full justify-center flex items-center gap-2">
         <Calendar class="w-4 h-4" />
         Réserver un appel
@@ -93,10 +105,14 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { nextTick } from 'vue'
 import { Menu, X, Calendar } from 'lucide-vue-next'
 import { useScroll } from '@/composables/useScroll'
 import CallButton from '@/components/ui/CallButton.vue'
 
+const router = useRouter()
+const route = useRoute()
 const { isScrolled } = useScroll()
 const mobileMenuOpen = ref(false)
 
@@ -109,11 +125,27 @@ const techWords = [
   'CHIFFREMENT MILITAIRE', 'OFFLINE-READY'
 ]
 
-const scrollToSection = (id) => {
+const scrollToSection = async (id) => {
   mobileMenuOpen.value = false
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
+  
+  // Si on n'est pas sur la page d'accueil, naviguer vers l'accueil d'abord
+  if (route.path !== '/') {
+    await router.push('/')
+    // Attendre que la page soit chargée avant de scroller
+    await nextTick()
+    // Petit délai supplémentaire pour s'assurer que le DOM est prêt
+    setTimeout(() => {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  } else {
+    // Si on est déjà sur l'accueil, scroller directement
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }
 

@@ -1,47 +1,49 @@
 <template>
-  <section id="pricing" class="py-20 bg-slate-900/30 border-y border-slate-800/50 relative">
+  <section id="pricing" class="py-12 md:py-24 px-6 bg-slate-900/30 border-y border-slate-800/50 relative">
     <TerminalBackground />
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-white mb-4">Solutions IA Souveraines & Agents IA Autonomes</h2>
-        <p class="text-slate-400">IA sécurisée Local First pour finance, santé, juridique. Chaque Mac Mini configuré = 100€ de don à la santé animale.</p>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 break-words">Solutions IA Souveraines & Agents IA Autonomes</h2>
+        <p class="text-slate-400 break-words">IA sécurisée Local First pour finance, santé, juridique. Chaque Mac Mini configuré = 100€ de don à la santé animale.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto items-stretch">
         <PricingCard
-          title="Architecture & Roadmap IA"
-          subtitle="Fondation Stratégique"
-          price="650€"
+          title="Pack Essentiel"
+          subtitle="Indépendants & Administratif"
+          price="2 490€"
           delay="0ms"
+          disclaimer="*Matériel inclus. Acompte de 50% à la commande."
           :features="[
-            'Analyse des risques & Sécurité données',
-            'Choix infrastructure locale (GPU/CPU)',
-            'Roadmap technique détaillée',
-            'Livrable : Dossier PDF complet'
+            'Mac Mini M4 (16 Go RAM / 256 Go) inclus',
+            'IA Locale (Mistral 7B / Llama 3)',
+            'Automation Emails & Synthèse doc',
+            'Don de 100€ à la cause animale inclus',
+            'Installation Clé en main & Formation (1h)'
           ]"
-          button-text="Commander mon plan"
+          button-text="Commander"
           :cta="openCal"
         />
         <PricingCard
-          title="MVP / Private Brain"
-          subtitle="Solution Clé en Main"
-          price="3 500€"
+          title="Pack Pro"
+          subtitle="Développeurs & Experts"
+          price="5 490€"
           :recommended="true"
           delay="200ms"
-          disclaimer="*Acompte de 50% requis à la commande pour l'achat du Mac Mini. Le matériel vous appartient dès la livraison."
+          disclaimer="*Matériel inclus. Acompte de 50% à la commande."
           :features="[
-            'Inclus : Mac Mini M2/M4 (Serveur)',
-            'Développement Vue.js/Python sur mesure',
-            'Cession totale du Code Source (IP)',
-            'Installation sur votre environnement',
-            'Intégration Mistral / Llama 3',
-            'Documentation technique complète'
+            'Mac Mini M4 Pro (48 Go RAM) inclus',
+            'IA Avancée (Modèles 32B+ & Coding)',
+            'RAG sur Base de données massive',
+            'Contexte Long (Analyse livres/code)',
+            'Don de 100€ à la cause animale inclus',
+            'Support Prioritaire & Maintenance (3 mois)'
           ]"
-          button-text="Démarrer le projet"
+          button-text="Commander"
           :cta="openCal"
         />
         <PricingCard
-          title="Solution Custom"
-          subtitle="Production & Scale"
+          title="Infrastructure Enterprise"
+          subtitle="Cluster GPU & Multi-Agents"
           price="Sur devis"
           delay="400ms"
           :features="[
@@ -51,6 +53,7 @@
             'Formation des équipes techniques',
             'Audit de conformité continu'
           ]"
+          button-text="Nous contacter"
           :cta="openCal"
         />
       </div>
